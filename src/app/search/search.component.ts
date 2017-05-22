@@ -9,7 +9,7 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
   }
   myMovieSearch(x: string) {
- // console.log("hi comp"+movieName);
-    this.router.navigate(['path', x]);
+  this.router.navigate(['path', x]);
+ 	    // naviagte to module.ts //
 };
 }

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { MoviesService } from './movies.service';
+
 @Component({
   selector: 'app-comp',
   templateUrl: './movies.component.html',
@@ -18,6 +19,7 @@ moviesName = [];
     this.route.params
       .switchMap((params: Params) => this.MoviesService.myMovieSearch(params['x']))
       .subscribe(moviesName => this.moviesName = moviesName);
+      // stored locally the moviename //
   }
 }
 

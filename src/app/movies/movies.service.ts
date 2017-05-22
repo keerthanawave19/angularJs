@@ -8,6 +8,7 @@ export class MoviesService {
   myMovieSearch(x: string) {
   return this.http.get ('http://www.omdbapi.com/?s=' + x)
                .map (response => response.json().Search) ;
+               // getting response from url //
   }
 }
 
